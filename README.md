@@ -22,7 +22,7 @@ This repository contains a Assignment project made in Flutter using Clean Archit
 <div style="display: flex; justify-content: space-between;">
     <img src="https://github.com/altafc22/eWallet/blob/main/screenshots/10.png" alt="Transactions" width="200">
     <img src="https://github.com/altafc22/eWallet/blob/main/screenshots/11.png" alt="Account Details (Sim account)" width="200">
-    <img src="https://github.com/altafc22/eWallet/blob/main/screenshots/12.png" alt="Sign Out" width="200">
+    <img src="https://github.com/altafc22/eWallet/blob/main/screenshots/12.png" alt="Add Account" width="200">
 </div>
 
 ## Download APK
