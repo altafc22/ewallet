@@ -1,5 +1,3 @@
-# ewallet
-
 # eWallet App
 This repository contains a Assignment project made in Flutter using Clean Architecture, BLoc and Cubit State management, Cubit, Hive, Jwt Auth
 
