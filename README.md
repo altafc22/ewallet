@@ -3,6 +3,19 @@
 # eWallet App
 This repository contains a Assignment project made in Flutter using Clean Architecture, BLoc and Cubit State management, Cubit, Hive, Jwt Auth
 
+
+## The app has the following base packages:
+- database: Models to work with Hive database
+- di: getIt
+- network: Http
+- repository: Clean Architecture with Data, Domain, Presentation layers
+- state management: BLoc 
+
+## Download APK
+<div style="display: flex; justify-content: space-between;">
+    <a href="https://github.com/altafc22/eWallet/blob/main/apk/app-release.apk">Download App</a>
+</div>
+
 ## Images
 <div style="display: flex; justify-content: space-between;">
     <img src="https://github.com/altafc22/eWallet/blob/main/screenshots/1.png" alt="Sign In" width="200">
@@ -25,15 +38,4 @@ This repository contains a Assignment project made in Flutter using Clean Archit
     <img src="https://github.com/altafc22/eWallet/blob/main/screenshots/12.png" alt="Add Account" width="200">
 </div>
 
-## Download APK
-<div style="display: flex; justify-content: space-between;">
-    <a href="https://github.com/altafc22/eWallet/blob/main/apk/app-debug.apk">Download App</a>
-</div>
 
-
-## The app has the following base packages:
-- database: Models to work with Hive database
-- di: getIt
-- network: Http
-- repository: Clean Architecture with Data, Domain, Presentation layers
-- state management: BLoc 

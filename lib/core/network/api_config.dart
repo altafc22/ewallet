@@ -1,7 +1,8 @@
 class ApiConfig {
   ApiConfig._();
 
-  static const String baseUrl = "http://localhost:5001/api/v1";
+  static const String baseUrl =
+      "https://ewallet-backend-a29y.onrender.com/api/v1";
 
   static const Duration receiveTimeout = Duration(milliseconds: 15000);
   static const Duration connectionTimeout = Duration(milliseconds: 15000);
