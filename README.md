@@ -1,16 +1,39 @@
 # ewallet
 
-A new Flutter project.
+# eWallet App
+This repository contains a Assignment project made in Flutter using Clean Architecture, BLoc and Cubit State management, Cubit, Hive, Jwt Auth
 
-## Getting Started
+## Images
+<div style="display: flex; justify-content: space-between;">
+    <img src="https://github.com/altafc22/Splitify/blob/main/screenshots/1.png" alt="Sign In" width="200">
+    <img src="https://github.com/altafc22/Splitify/blob/main/screenshots/2.png" alt="Sign Up" width="200">
+    <img src="https://github.com/altafc22/Splitify/blob/main/screenshots/3.png" alt="Dashboard" width="200">
+</div>
+<div style="display: flex; justify-content: space-between;">
+    <img src="https://github.com/altafc22/Splitify/blob/main/screenshots/4.png" alt="TopUp Screen" width="200">
+    <img src="https://github.com/altafc22/Splitify/blob/main/screenshots/5.png" alt="Recharge Wallet" width="200">
+    <img src="https://github.com/altafc22/Splitify/blob/main/screenshots/6.png" alt="Transaction receipt" width="200">
+</div>
+<div style="display: flex; justify-content: space-between;">
+    <img src="https://github.com/altafc22/Splitify/blob/main/screenshots/7.png" alt="Wallet Receipt" width="200">
+    <img src="https://github.com/altafc22/Splitify/blob/main/screenshots/8.png" alt="Accoount (Mobile Sim)" width="200">
+    <img src="https://github.com/altafc22/Splitify/blob/main/screenshots/9.png" alt="Profile" width="200">
+</div>
+<div style="display: flex; justify-content: space-between;">
+    <img src="https://github.com/altafc22/Splitify/blob/main/screenshots/10.png" alt="Transactions" width="200">
+    <img src="https://github.com/altafc22/Splitify/blob/main/screenshots/11.png" alt="Account Details (Sim account)" width="200">
+    <img src="https://github.com/altafc22/Splitify/blob/main/screenshots/12.png" alt="Sign Out" width="200">
+</div>
 
-This project is a starting point for a Flutter application.
+## Download APK
+<div style="display: flex; justify-content: space-between;">
+    <a href="https://github.com/altafc22/Splitify/blob/main/apk/app-debug.apk">Download App</a>
+</div>
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## The app has the following base packages:
+- database: Models to work with Hive database
+- di: getIt
+- network: Http
+- repository: Clean Architecture with Data, Domain, Presentation layers
+- state management: BLoc 
