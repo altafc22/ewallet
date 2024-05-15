@@ -2,6 +2,7 @@ import 'package:ewallet/core/app_extension.dart';
 import 'package:ewallet/core/common/cubits/auth/auth_cubit.dart';
 import 'package:ewallet/core/common/cubits/auth/auth_state.dart';
 import 'package:ewallet/core/common/entities/auth/auth_entity.dart';
+import 'package:ewallet/core/common/widget/auth_guard.dart';
 import 'package:ewallet/core/common/widget/confirmation_dialog.dart';
 import 'package:ewallet/core/common/widget/generic_appbar.dart';
 import 'package:ewallet/core/common/widget/generic_button.dart';
@@ -46,57 +47,63 @@ class _ProfilePageState extends State<ProfilePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const CustomAppBar(
-        title: 'Profile',
-        backgroundColor: AppPallete.primary,
-      ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          _getHeader(),
-          BlocConsumer<AuthCubit, AuthState>(
-            listener: (context, state) {
-              if (state is AuthData) {
-                session = state.user;
-              }
-            },
-            builder: (context, state) {
-              return Container();
-            },
-          ),
-          Padding(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              children: [
-                field(
-                  FontAwesomeIcons.solidUser,
-                  "ID",
-                  "${session.user.id?.toUpperCase()}",
-                ),
-                field(
-                  FontAwesomeIcons.solidUser,
-                  "Username (email)",
-                  "${session.user.username}",
-                ),
-                field(
-                  FontAwesomeIcons.phone,
-                  "Phone number",
-                  "${session.user.phone}",
-                ),
-                field(
-                  FontAwesomeIcons.certificate,
-                  "Verified User",
-                  session.user.isVerified! ? 'Yes' : 'No',
-                ),
-              ],
+    return AuthGuard(
+      child: Scaffold(
+        appBar: const CustomAppBar(
+          title: 'Profile',
+          backgroundColor: AppPallete.primary,
+        ),
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _getHeader(),
+            BlocConsumer<AuthCubit, AuthState>(
+              listener: (context, state) {
+                if (state is AuthData) {
+                  session = state.user;
+                }
+              },
+              builder: (context, state) {
+                return Container();
+              },
             ),
-          ),
-          Padding(
-            padding: EdgeInsets.all(16),
-            child: GenericButton(buttonText: "Logout", onPressed: () {}),
-          )
-        ],
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                children: [
+                  field(
+                    FontAwesomeIcons.solidUser,
+                    "ID",
+                    "${session.user.id?.toUpperCase()}",
+                  ),
+                  field(
+                    FontAwesomeIcons.solidUser,
+                    "Username (email)",
+                    "${session.user.username}",
+                  ),
+                  field(
+                    FontAwesomeIcons.phone,
+                    "Phone number",
+                    "${session.user.phone}",
+                  ),
+                  field(
+                    FontAwesomeIcons.certificate,
+                    "Verified User",
+                    session.user.isVerified! ? 'Yes' : 'No',
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(16),
+              child: GenericButton(
+                  buttonText: "Logout",
+                  onPressed: () {
+                    _showLogoutDialog();
+                  }),
+            )
+          ],
+        ),
       ),
     );
   }
